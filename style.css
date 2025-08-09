@@ -1,0 +1,804 @@
+/* Importation de la police Google Fonts 'Inter' pour un look moderne et lisible */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+/* --- Styles Généraux --- */
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  padding-top: 70px; /* Pour éviter que le contenu ne soit caché sous le menu fixe */
+  background-color: #f8fbfd; /* Un fond très léger pour un aspect propre */
+}
+
+.section-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 40px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08); /* Ombre plus prononcée pour un effet de profondeur */
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bg-light {
+  background-color: #eef7fc; /* Couleur de fond légèrement différente pour certaines sections */
+}
+
+h1, h2, h3 {
+  color: #2c3e50; /* Couleur des titres */
+  margin-bottom: 25px;
+  font-weight: 700; /* Plus gras pour l'impact */
+}
+
+h2 {
+  font-size: 2.5em;
+  text-align: center;
+  border-bottom: 3px solid #007bff;
+  padding-bottom: 15px;
+  margin-top: 0;
+}
+
+h3 {
+  font-size: 1.8em;
+  color: #007bff; /* Couleur d'accent pour les sous-titres */
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 25px;
+}
+
+ul li::before {
+  content: '✓'; /* Une coche simple comme puce */
+  color: #28a745; /* Vert pour les coches */
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* --- Boutons Génériques --- */
+.btn {
+  display: inline-block;
+  padding: 14px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin: 10px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.btn-secondary {
+  background-color: #6c757d; /* Gris plus doux */
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.btn-large {
+    padding: 18px 35px;
+    font-size: 1.1em;
+}
+
+/* --- Menu de Navigation --- */
+nav {
+  background-color: #2c3e50; /* Bleu foncé pour la barre de navigation */
+  padding: 15px 0;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.site-title {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.8em;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+  margin: 0;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #007bff; /* Couleur d'accent au survol */
+  color: #fff;
+}
+
+/* --- Section Héro / Introduction --- */
+.hero-section {
+  background: linear-gradient(135deg, #007bff, #0056b3); /* Dégradé de bleu */
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px; /* Hauteur minimale pour la section héro */
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: row; /* Par défaut, photo à gauche, texte à droite */
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.profile-photo {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%; /* Photo ronde */
+  object-fit: cover;
+  border: 6px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.hero-text {
+  text-align: left; /* Texte aligné à gauche */
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  font-size: 3.5em;
+  color: #fff;
+  margin-bottom: 10px;
+  line-height: 1.1;
+}
+
+.hero-text .tagline {
+  font-size: 1.5em;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: #e0f2f7;
+}
+
+.hero-text .intro-message {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  line-height: 1.8;
+  color: #f0f8ff;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start; /* Aligne les boutons à gauche */
+}
+
+/* --- Section À Propos de Moi --- */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 3 colonnes flexibles */
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.about-item {
+  padding: 25px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  background-color: #fefefe;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.about-item h3 {
+    color: #007bff;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+
+/* --- Section Compétences Clés --- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 2 ou 3 colonnes flexibles */
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.skill-item {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.skill-item h3 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* --- Section Appel à l'action final --- */
+.cta-buttons {
+  margin-top: 30px;
+}
+
+/* --- Pied de page --- */
+footer {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-container p {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+}
+
+.social-links img {
+  width: 30px;
+  height: 30px;
+  filter: invert(100%); /* Rend les icônes blanches pour correspondre au thème */
+  transition: transform 0.2s ease;
+}
+
+.social-links img:hover {
+  transform: translateY(-3px);
+}
+
+
+/* --- Media Queries pour la Responsivité --- */
+
+@media (max-width: 992px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  .hero-section {
+    padding: 60px 20px;
+  }
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+  .profile-photo {
+    width: 200px;
+    height: 200px;
+  }
+  .hero-text {
+    text-align: center;
+  }
+  .hero-text h1 {
+    font-size: 3em;
+  }
+  .hero-text .tagline {
+    font-size: 1.3em;
+  }
+  .hero-actions {
+    justify-content: center;
+  }
+  .about-grid, .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 100px; /* Augmente le padding si la nav prend plus de hauteur */
+  }
+  .section-container {
+    padding: 25px;
+    margin: 25px auto;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  .hero-text h1 {
+    font-size: 2.5em;
+  }
+  .hero-text .tagline {
+    font-size: 1.1em;
+  }
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.95em;
+  }
+  .btn-large {
+      padding: 14px 28px;
+      font-size: 1em;
+  }
+  .hero-actions {
+      flex-direction: column; /* Empile les boutons sur mobile */
+      gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul {
+    flex-direction: column; /* Menu vertical sur très petits écrans */
+    align-items: center;
+    gap: 10px;
+  }
+  .nav-container {
+    padding: 0 10px;
+  }
+  .hero-text h1 {
+    font-size: 2em;
+  }
+  .profile-photo {
+    width: 180px;
+    height: 180px;
+  }
+  .section-container {
+    padding: 20px;
+    margin: 15px auto;
+  }
+  .about-grid, .skills-grid {
+    grid-template-columns: 1fr; /* Une seule colonne sur très petits écrans */
+  }
+}
+
+/* --- Styles spécifiques pour la page CV --- */
+.cv-section {
+  margin-bottom: 50px;
+  padding: 25px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #fefefe;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.cv-section h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+  color: #2c3e50; /* Couleur des titres de section */
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+}
+
+/* Styles pour les icônes (Font Awesome ou similaires) */
+.cv-section h3 .icon-user::before { content: '👤'; margin-right: 5px; color: #007bff; }
+.cv-section h3 .icon-briefcase::before { content: '💼'; margin-right: 5px; color: #007bff; }
+.cv-section h3 .icon-star::before { content: '⭐'; margin-right: 5px; color: #007bff; }
+.cv-section h3 .icon-graduation-cap::before { content: '🎓'; margin-right: 5px; color: #007bff; }
+.cv-section h3 .icon-language::before { content: '🌐'; margin-right: 5px; color: #007bff; }
+
+/* Si vous voulez de vraies icônes, ajoutez une ligne comme celle-ci dans le <head> de vos pages HTML:
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   Et changez les classes dans le HTML: par exemple, <i class="fas fa-user"></i>
+*/
+
+.experience-item, .education-item {
+  margin-bottom: 30px;
+  padding-left: 20px;
+  border-left: 3px solid #007bff; /* Barre bleue sur le côté */
+}
+
+.experience-item h4, .education-item h4 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: #34495e;
+  font-size: 1.4em;
+}
+
+.meta {
+  font-size: 0.9em;
+  color: #777;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.skills-category-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.skills-category-item {
+    background-color: #fcfcfc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.skills-category-item h4 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.language-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px 30px;
+}
+
+.language-list li {
+  font-size: 1.1em;
+  font-weight: 500;
+  color: #34495e;
+  background-color: #eef7fc;
+  padding: 8px 15px;
+  border-radius: 25px;
+  border: 1px solid #007bff;
+}
+
+.language-list li::before {
+  content: '🗣️'; /* Emoji pour les langues */
+  color: #007bff;
+}
+
+/* Style pour le lien de navigation actif */
+nav ul li a.active {
+  background-color: #007bff; /* Mêmes couleurs que le hover pour la page active */
+  color: #fff;
+  pointer-events: none; /* Empêche de cliquer sur la page déjà active */
+}
+
+/* Media Queries pour la responsivité de la page CV */
+@media (max-width: 768px) {
+  .experience-item, .education-item {
+    padding-left: 15px;
+  }
+  .skills-category-list {
+    grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+  }
+}
+
+/* --- Styles spécifiques pour la page Blog --- */
+.blog-intro {
+  text-align: center;
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blog-articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Cartes flexibles, 2 ou 3 par ligne */
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.blog-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.blog-card h3 {
+  font-size: 1.8em;
+  margin-top: 0;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.blog-card h3 a {
+  color: #2c3e50;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.blog-card h3 a:hover {
+  color: #007bff;
+}
+
+.article-meta {
+  font-size: 0.9em;
+  color: #777;
+  margin-bottom: 20px;
+  border-bottom: 1px dashed #eee;
+  padding-bottom: 10px;
+}
+
+.blog-card p {
+  flex-grow: 1; /* Permet au paragraphe de prendre l'espace restant avant le bouton */
+  margin-bottom: 25px;
+}
+
+.blog-card .read-more {
+  display: inline-block;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s ease;
+}
+
+.blog-card .read-more:hover {
+  text-decoration: underline;
+  transform: translateX(5px);
+}
+
+/* --- Styles pour les Articles individuels (futurs) --- */
+.article-content {
+  line-height: 1.8;
+  font-size: 1.1em;
+}
+
+.article-content h3 {
+  font-size: 2em;
+  margin-top: 40px;
+  color: #2c3e50;
+}
+
+.article-content p {
+  margin-bottom: 1em;
+}
+
+.article-content ul {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+.article-content ul li {
+  margin-bottom: 5px;
+}
+
+/* Bouton "Retour au blog" */
+.back-to-blog {
+    display: inline-block;
+    margin-top: 40px;
+    font-weight: 600;
+    color: #007bff;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.back-to-blog:hover {
+    transform: translateX(-5px);
+    text-decoration: underline;
+}
+
+/* Media Queries pour la page Blog */
+@media (max-width: 768px) {
+    .blog-articles-grid {
+        grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+    }
+    .blog-card {
+        padding: 20px;
+    }
+}
+
+/* --- Styles spécifiques pour la page Contact --- */
+.contact-intro {
+  text-align: center;
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #fefefe;
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #34495e;
+  font-size: 1em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+  width: calc(100% - 20px); /* Ajuste la largeur pour le padding */
+  padding: 12px 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif; /* Conserve la même police */
+  font-size: 1em;
+  color: #333;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+  outline: none;
+}
+
+.form-group textarea {
+  resize: vertical; /* Permet de redimensionner verticalement */
+  min-height: 120px;
+}
+
+.form-actions {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.hidden {
+  display: none; /* Cache le champ honeypot */
+}
+
+/* Media Queries pour la page Contact */
+@media (max-width: 600px) {
+  .contact-form {
+    padding: 20px;
+  }
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group textarea {
+    width: calc(100% - 20px); /* Reste la même, mais s'assure qu'elle est bien à 100% visuellement */
+  }
+}
+
+/* --- Styles spécifiques pour la page Lettre de Motivation --- */
+.motivation-letter-card {
+  max-width: 850px; /* Largeur d'une feuille A4 typique sur écran */
+  margin: 40px auto;
+  padding: 40px 50px; /* Plus d'espace interne pour ressembler à une lettre */
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  line-height: 1.8; /* Espacement confortable pour la lecture */
+  font-size: 1.1em;
+  color: #333;
+}
+
+.letter-header {
+    margin-bottom: 40px;
+}
+
+.motivation-letter-card p {
+  margin-bottom: 1em; /* Espacement entre les paragraphes */
+  text-align: justify; /* Justifier le texte pour un rendu plus formel */
+}
+
+.motivation-letter-card h4 {
+  font-size: 1.2em;
+  color: #007bff;
+  margin-top: 0;
+}
+
+.signature-block {
+  text-align: right;
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px dashed #eee; /* Ligne de séparation subtile */
+}
+
+.signature-image {
+  max-width: 200px; /* Taille maximale de la signature */
+  height: auto;
+  display: block; /* Pour centrer l'image */
+  margin-left: auto;
+  margin-right: 0; /* Aligne l'image à droite */
+  margin-bottom: 10px;
+}
+
+.signature-block p {
+  margin: 0;
+  font-weight: 600;
+  color: #2c3e50;
+  text-align: right; /* Aligner le nom à droite */
+}
+
+/* Ajustements pour la responsivité de la lettre */
+@media (max-width: 768px) {
+  .motivation-letter-card {
+    padding: 30px 20px;
+    margin: 20px auto;
+  }
+  .signature-image {
+    max-width: 150px; /* Rendre la signature plus petite sur mobile */
+  }
+}

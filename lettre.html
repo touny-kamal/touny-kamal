@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lettre de Motivation - Kamal Touny</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="site-title">Kamal Touny</a>
+      <ul>
+        <li><a href="index.html#about">À propos</a></li>
+        <li><a href="index.html#skills">Compétences</a></li>
+        <li><a href="cv.html">Mon CV</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="lettre.html" class="active">Lettre de Motivation</a></li> <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="section-container">
+    <h2>Ma Lettre de Motivation</h2>
+
+    <section class="motivation-letter-card">
+        <div class="letter-header">
+            <p style="text-align: right; margin-bottom: 5px;">Casablanca, le <span id="current-date"></span></p>
+            <h4 style="margin-bottom: 20px;">Objet : Candidature spontanée</h4>
+        </div>
+
+        <p>Madame, Monsieur,</p>
+
+        <p>Fort de mes compétences acquises en gestion et comptabilité, domaines dans lesquels j'ai développé une rigueur analytique, une maîtrise des outils informatiques et des logiciels financiers, je suis aujourd'hui animé par une profonde motivation à réorienter ma carrière vers un poste commercial. Mon parcours m'a permis d'appréhender les rouages financiers et opérationnels des entreprises, me dotant ainsi d'une compréhension globale essentielle pour identifier les besoins de vos futurs clients et construire des propositions de valeur ciblées.</p>
+
+        <p>Ma capacité à analyser des données complexes et à optimiser les processus, combinés à un dynamisme naturel et à ma pro-activité, sont des atouts que je souhaite désormais mettre au service de la croissance de votre chiffre d'affaires. J'ai toujours été guidé par la recherche de solutions efficaces, et je suis convaincu que cette approche méthodique sera un levier puissant dans une démarche commerciale proactive et orientée résultats.</p>
+
+        <p>Par ailleurs, la création récente de mon site web CV a été une opportunité concrète de développer mes aptitudes en communication digitale et en mise en valeur de mes compétences. Cette expérience m'a permis de cultiver un sens aigu de la persuasion et du relationnel, me confirmant mon attrait pour les interactions commerciales et la construction de partenariats durables. Je suis prêt à entreprendre cette nouvelle aventure professionnelle avec détermination, en apportant non seulement mes bases solides en gestion, mais aussi ma capacité à créer du lien, à négocier et à concrétiser des opportunités.</p>
+
+        <p>Disponible immédiatement, et désireux de m'investir pleinement dans ce challenge passionnant, je serais honoré de vous rencontrer lors d'un entretien. Ce serait l'occasion de vous démontrer comment mon profil unique et ma motivation inébranlable peuvent devenir un avantage significatif pour votre équipe commerciale.</p>
+
+        <p style="margin-top: 30px;">Je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.</p>
+
+        <div class="signature-block">
+            <img src="signature.png" alt="Signature de Kamal Touny" class="signature-image">
+            <p><strong>TOUNY Kamal</strong></p>
+        </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <p>&copy; <span id="current-year-lettre"></span> Kamal Touny. Tous droits réservés.</p>
+      <div class="social-links">
+        <a href="https://linkedin.com/in/kamal-kamal-b1b211255/" target="_blank" aria-label="LinkedIn"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Script pour afficher la date actuelle
+    const today = new Date();
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    document.getElementById('current-date').textContent = today.toLocaleDateString('fr-FR', options);
+    // Script pour mettre à jour l'année dans le pied de page
+    document.getElementById('current-year-lettre').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

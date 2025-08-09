@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog de Kamal Touny - Réflexions Professionnelles</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="site-title">Kamal Touny</a>
+      <ul>
+        <li><a href="index.html#about">À propos</a></li>
+        <li><a href="index.html#skills">Compétences</a></li>
+        <li><a href="cv.html">Mon CV</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li> <li><a href="lettre.html">Lettre de Motivation</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="section-container">
+    <h2>Mon Blog : Réflexions et Analyses</h2>
+    <p class="blog-intro">Bienvenue sur mon espace de partage où je publie régulièrement des réflexions sur le management, le commerce, la gestion financière, et les dynamiques spécifiques du marché marocain.</p>
+
+    <div class="blog-articles-grid">
+
+      <article class="blog-card">
+        <h3><a href="blog/article-strategie-management.html">Stratégies de Management Efficace : Levier de Performance Commerciale</a></h3>
+        <p class="article-meta">Publié le <time datetime="2024-05-15">15 Mai 2024</time> | Catégorie : Management, Commerce</p>
+        <p>Découvrez comment une approche managériale structurée peut directement impacter la croissance de votre chiffre d'affaires et l'efficacité de vos équipes commerciales...</p>
+        <a href="blog/article-strategie-management.html" class="read-more">Lire l'article &rarr;</a>
+      </article>
+
+      <article class="blog-card">
+        <h3><a href="blog/article-optimisation-financiere.html">Optimisation Financière pour la Croissance Commerciale : Perspectives d'un Candidat Rigoureux</a></h3>
+        <p class="article-meta">Publié le <time datetime="2024-04-28">28 Avril 2024</time> | Catégorie : Finance, Stratégie Commerciale</p>
+        <p>L'optimisation des ressources financières est cruciale. Cet article explore des méthodes éprouvées pour garantir une santé financière solide au service de vos objectifs commerciaux...</p>
+        <a href="blog/article-optimisation-financiere.html" class="read-more">Lire l'article &rarr;</a>
+      </article>
+
+      <article class="blog-card">
+        <h3><a href="blog/article-reconversion-site-cv.html">De la Comptabilité au Commerce : Mon Projet de Reconversion et la Création de Mon Site CV</a></h3>
+        <p class="article-meta">Publié le <time datetime="2024-04-10">10 Avril 2024</time> | Catégorie : Parcours Professionnel, Développement Personnel</p>
+        <p>Un témoignage personnel sur mon cheminement de carrière, et comment la création de ce site web a été une étape clé dans ma transition vers le commerce...</p>
+        <a href="blog/article-reconversion-site-cv.html" class="read-more">Lire l'article &rarr;</a>
+      </article>
+
+      <article class="blog-card">
+        <h3><a href="blog/article-marche-marocain.html">Dynamiques du Marché Marocain : Une Perspective Pratique sur les Défis et Opportunités Commerciales</a></h3>
+        <p class="article-meta">Publié le <time datetime="2024-03-20">20 Mars 2024</time> | Catégorie : Marché Marocain, Économie</p>
+        <p>Analyse des spécificités du marché marocain, ses opportunités inexploitées et les stratégies pour y prospérer...</p>
+        <a href="blog/article-marche-marocain.html" class="read-more">Lire l'article &rarr;</a>
+      </article>
+
+      <article class="blog-card">
+        <h3><a href="blog/article-consommateur-marocain.html">Décrypter le Consommateur Marocain : Tendances, Attentes et Stratégies d'Approche</a></h3>
+        <p class="article-meta">Publié le <time datetime="2024-03-05">05 Mars 2024</time> | Catégorie : Consommation, Marketing</p>
+        <p>Comprendre les nuances du comportement du consommateur marocain est essentiel. Cet article offre des clés pour des approches marketing efficaces...</p>
+        <a href="blog/article-consommateur-marocain.html" class="read-more">Lire l'article &rarr;</a>
+      </article>
+
+      <article class="blog-card">
+        <h3><a href="blog/article-tendances-maroc.html">Tendances Émergentes au Maroc : Anticiper pour Réussir dans le Commerce</a></h3>
+        <p class="article-meta">Publié le <time datetime="2024-02-18">18 Février 2024</time> | Catégorie : Innovation, Commerce</p>
+        <p>Explorez les tendances actuelles et futures qui façonnent le paysage commercial marocain, et comment votre entreprise peut s'y adapter...</p>
+        <a href="blog/article-tendances-maroc.html" class="read-more">Lire l'article &rarr;</a>
+      </article>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <p>&copy; <span id="current-year-blog"></span> Kamal Touny. Tous droits réservés.</p>
+      <div class="social-links">
+        <a href="https://linkedin.com/in/kamal-kamal-b1b211255/" target="_blank" aria-label="LinkedIn"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('current-year-blog').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
